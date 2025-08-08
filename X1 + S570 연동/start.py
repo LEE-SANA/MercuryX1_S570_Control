@@ -29,8 +29,8 @@ mr.send_angles([0, 0, 0, 0, 0, 90, 0], 40)
 time.sleep(3)
 
 # VR 모드 및 움직임 타입 설정
-ml.set_movement_type(3)
-mr.set_movement_type(3)
+ml.set_movement_type(0)
+mr.set_movement_type(0)
 ml.set_vr_mode(1)
 mr.set_vr_mode(1)
 
@@ -40,8 +40,8 @@ data_lock = threading.Lock()
 
 # 관절값 제한 함수
 def jointlimit(angles):
-    max_val = [165, 120, 175, 0, 175, 180, 175]
-    min_val = [-165, -50, -175, -175, -175, 60, -175]
+    max_val = [165, 120, 175, 5, 175, 180, 175]
+    min_val = [-165, -50, -175, -170, -175, 60, -175]
     for i in range(7):
         angles[i] = max(min(angles[i], max_val[i]), min_val[i])
 
@@ -72,7 +72,7 @@ def control_arm(arm):
             jointlimit(mercury_list)
 
             # 속도 고정
-            TI = 5
+            TI = 40
 
             # 그리퍼 제어 (오른팔만)
             if arm == 2:
@@ -88,7 +88,7 @@ def control_arm(arm):
 
             # 로봇에 관절값 전송
             mc.send_angles(mercury_list, TI, _async=True)
-            time.sleep(0.01)
+            time.sleep(0.02)
 
         except Exception:
             time.sleep(0.01)  # 에러 무시 후 재시도

@@ -28,8 +28,8 @@ def main():
         try:
             arm_data = obj.get_arm_data(2)  # 오른팔
 
-            now_close = arm_data[9]  # 닫기 버튼
-            now_open = arm_data[10]  # 열기 버튼
+            now_close = arm_data[10]  # 닫기 버튼
+            now_open = arm_data[9]  # 열기 버튼
 
             # 버튼 상태 변화 감지 (눌렀을 때만 작동)
             if now_close == 0 and prev_close == 1:
