@@ -16,7 +16,7 @@
 
 **연결방법**
 
-- S570 WiFi 모드로 변경 후 X1에서 elephant 찾아서 wifi 연결 (비밀번호 : elephant)
+S570 WiFi 모드로 변경 후 X1에서 elephant 찾아서 wifi 연결 (비밀번호 : elephant)
 X1 내 OS에서 코드 작성
 
  
