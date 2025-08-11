@@ -7,7 +7,6 @@
 `rostopic echo /PowerVoltage`
 
 4. X1 제어 확인 (몸통 제어)
-   
 `roslaunch mercury_x1_teleop keyboard_teleop.launch` 
 
 5. X1 Arm 제어 확인
@@ -22,16 +21,25 @@ X1 내 OS에서 코드 작성
  
 
 **ls /dev/tty* 입력해서 시리얼 포트 확인**
+
 S570 : ttyACM3 (확인 필요) - 유선일 경우
+
 Left Arm : ttyTHS0
+
 Right Arm : ttyACM1
 
+
 **sensor value error로 코드가 작동하지 않을 경우** 
+
 [release.py 코드를 사용해 수동으로 팔 영점 조절 ]
+
 [focus.py로 팔 잠금 및 영점 위치 갱신 ]
+
 [영점 조절 완료 후 angle.py로 작동 확인]
 
+
 **실행 방법 요약**
+
 1. X1, S570 전원 켜기 
 2. S570 첫번째 버튼 눌러서 WiFi 모드로 변경 
 3. X1에서 WiFi 킨 후 elephant에 연결 (비밀번호 : elephant)
