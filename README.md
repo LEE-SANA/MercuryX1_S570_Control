@@ -1,16 +1,21 @@
 **실행 확인**
 
 1. 기본 제어 시작
-`roslaunch turn_on_mercury_robot turn_on_mercury_robot.launch` 
-2. 배터리 잔량 확인 (21이상)
+`roslaunch turn_on_mercury_robot turn_on_mercury_robot.launch`
+
+3. 배터리 잔량 확인 (21이상)
 `rostopic echo /PowerVoltage`
-3. X1 제어 확인 (몸통 제어)
+
+4. X1 제어 확인 (몸통 제어)
+   
 `roslaunch mercury_x1_teleop keyboard_teleop.launch` 
-4. X1 Arm 제어 확인
-5. `python angle.py`
+
+5. X1 Arm 제어 확인
+`python angle.py`
     
 
 **연결방법**
+
 S570 WiFi 모드로 변경 후 X1에서 elephant 찾아서 wifi 연결 (비밀번호 : elephant)
 X1 내 OS에서 코드 작성
 
