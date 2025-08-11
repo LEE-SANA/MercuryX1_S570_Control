@@ -11,11 +11,12 @@
 
 5. X1 Arm 제어 확인
 `python angle.py`
+
     
 
 **연결방법**
 
-S570 WiFi 모드로 변경 후 X1에서 elephant 찾아서 wifi 연결 (비밀번호 : elephant)
+- S570 WiFi 모드로 변경 후 X1에서 elephant 찾아서 wifi 연결 (비밀번호 : elephant)
 X1 내 OS에서 코드 작성
 
  
@@ -29,6 +30,7 @@ Left Arm : ttyTHS0
 Right Arm : ttyACM1
 
 
+
 **sensor value error로 코드가 작동하지 않을 경우** 
 
 [release.py 코드를 사용해 수동으로 팔 영점 조절 ]
@@ -36,6 +38,7 @@ Right Arm : ttyACM1
 [focus.py로 팔 잠금 및 영점 위치 갱신 ]
 
 [영점 조절 완료 후 angle.py로 작동 확인]
+
 
 
 **실행 방법 요약**
